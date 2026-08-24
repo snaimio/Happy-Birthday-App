@@ -57,14 +57,15 @@ fun BirthdayCardContent() {
             painter = painterResource(id = R.drawable.androidparty),
             contentDescription = "Birthday Background",
             modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            alpha = 0.5f
         )
 
         // ===== DARK OVERLAY =====
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(0x66000000))
+                .background(Color(0x44000000))
         )
 
         // ===== TEXT ON TOP =====
@@ -75,6 +76,7 @@ fun BirthdayCardContent() {
                 .fillMaxSize()
                 .padding(horizontal = 32.dp, vertical = 24.dp)
         ) {
+            // Top decoration
             Text(
                 text = "✨",
                 fontSize = 40.sp,
@@ -83,6 +85,7 @@ fun BirthdayCardContent() {
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            // "Happy Birthday" text
             Text(
                 text = "Happy Birthday",
                 fontSize = 36.sp,
@@ -100,6 +103,7 @@ fun BirthdayCardContent() {
                 )
             )
 
+            // Name text
             Text(
                 text = "Hafsa!",
                 fontSize = 48.sp,
@@ -119,6 +123,7 @@ fun BirthdayCardContent() {
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            // Decorative divider
             Text(
                 text = "🎂",
                 fontSize = 36.sp,
@@ -127,6 +132,7 @@ fun BirthdayCardContent() {
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            // First message line
             Text(
                 text = "Wishing you all the best",
                 fontSize = 18.sp,
@@ -143,6 +149,7 @@ fun BirthdayCardContent() {
                 )
             )
 
+            // Second message line
             Text(
                 text = "on your special day! 🎉",
                 fontSize = 22.sp,
@@ -161,6 +168,28 @@ fun BirthdayCardContent() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            // "From" text - Centered
+            Text(
+                text = "From Abbu",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFFFFD700),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(16.dp)
+                    .align(alignment = Alignment.CenterHorizontally),
+                style = TextStyle(
+                    shadow = Shadow(
+                        color = Color.Black,
+                        offset = Offset(1f, 1f),
+                        blurRadius = 4f
+                    )
+                )
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            // Bottom decoration
             Text(
                 text = "❤️",
                 fontSize = 36.sp
